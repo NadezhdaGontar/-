@@ -33,3 +33,46 @@ cancelBtn.onclick = () => {
   searchInput.value = "";
 }
 
+
+//Табы//
+document.querySelectorAll('.tabs__item').forEach(function(tabsBtn) {
+  tabsBtn.addEventListener('click', function(e) {
+    const path = e.currentTarget.dataset.tab;
+
+document.querySelectorAll('.tabs__item').forEach(function(btn){
+  btn.classList.remove('tabs__item--active')});
+    e.currentTarget.classList.add('tabs__item--active');
+    
+ })
+})
+const tabHeaders = document.querySelectorAll('[data-tab]');
+const contentBoxes = document.querySelectorAll('[data-tab-content]');
+
+tabHeaders.forEach(function (item) {
+    item.addEventListener('click', function () {
+             
+        
+      // 1. Скрыть все content box
+        contentBoxes.forEach(function (item) {
+        item.classList.add('hidden');
+        
+
+      });
+      // 2. Выбрать нужный content box и показать его
+        
+        const contentBox = document.querySelector('#' + this.dataset.tab);
+        contentBox.classList.remove('hidden');
+    });     
+})
+
+
+
+const headers = document.querySelectorAll("[data-name='accordeon-title']");
+
+headers.forEach(function (item) {
+    item.addEventListener('click', showContent);
+})
+
+function showContent() {
+    this.nextElementSibling.classList.toggle('hidden');
+}

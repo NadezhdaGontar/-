@@ -3,7 +3,13 @@
 @import"reset";
 @import"libs";
 @import"global";
-
+.hidden{
+  display: none;
+}
+.aktiv{
+  border-bottom: 1px solid $border;
+  color: $border;
+}
 .header{
   padding-top: 20px;
   &__inner{
@@ -268,6 +274,7 @@
     padding: 66px 0 66px 330px;
     border: 1px solid #cacaca;
   }
+
   &__item:nth-child(1){
     margin-bottom: 45px;
     background-image: url('../images/about/item_one.svg');
@@ -292,6 +299,78 @@
       line-height: 20px;
     }
  }
+ .tabs{
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__list{
+    display: flex;
+    
+  }
+  &__item{
+    margin-right: 85px;
+    @extend %monserrat-400;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-bottom: 49px;
+    
+   
+    }
+  &__item--active{
+    padding-bottom: 8px;
+    border-bottom: 1px solid $border;
+    color: $border;
+  }
+  
+  &__content-inner{
+    display: flex;
+  }
+  &__subtitle{
+    @extend %monserrat-700;
+
+  }
+  &__content-text{
+    width: 50%;
+    margin-right: 40px;
+    @extend %monserrat-400;
+    font-size: 16px;
+    line-height: 32px;
+
+    
+  }
+  &__content-img{
+    width: 50%;
+  }
+
+ }
+ .faqs{
+  margin-top: 100px;
+  &__title{
+    margin-bottom: 50px;
+
+  }
+  &__wrapper{
+    border: 1px solid #cacaca;
+    border-right: none;
+    border-left: none;
+    padding: 39px 0;
+  }
+  &__subtitle{
+    @extend %monserrat-700;
+    line-height: 32px;
+    color: #333;
+    padding-bottom: 20px;
+    cursor: pointer;
+    
+  }
+  &__content{
+    @extend %monserrat-400;
+    line-height: 32px;
+    color: #333;
+  }
+ }
+ 
  
 .footer{
   margin-top: 100px;
