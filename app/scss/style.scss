@@ -17,6 +17,11 @@
   justify-content: space-between;
   align-items: center;
   }
+  
+}
+.logo__img{
+  width: 70px;
+  height: 72px;
 }
 
 .menu{
@@ -29,11 +34,11 @@
   }
   &__list{
     display: flex;
-    padding-right: 72px;
+   /* padding-right: 40px;*/
   
   }
     &__list-item + .menu__list-item{
-    padding-left: 85px;
+    padding-left: 100px;
   }
   &__list-link{
     color: $default;
@@ -44,14 +49,14 @@
       border-bottom: 2px solid $border;
     }
     &--active{
-      color: $accent;
-      border-bottom: 2px solid $accent;
+      color: $default;
+      border-bottom: 2px solid #ff4500;
     }
   }
 }
 .search-form{
    position: relative;
-    margin-left: 70px;
+    margin-left: 15px;
     width: 50px;
     height: 60px;
     transition: all .3s;
@@ -84,7 +89,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background: $border;
+    background: #ff4500;
     text-align: center;
     line-height: 50px;
     transform: translateY(-50%);
@@ -122,20 +127,20 @@
   margin-top: 30px;
   margin-bottom: 100px;
   &__item-one{
-    background-image: url('../images/slider/slider_one.png');
+    background-image: url('../images/slider_1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: left center;
 
   }
   &__item-two{
-    background-image: url('../images/slider/slider_two.png');
+    background-image: url('../images/slider_2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: bottom center;
   }
   &__item-three{
-     background-image: url('../images/slider/slider_tree.png');
+     background-image: url('../images/230.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right center;
@@ -149,6 +154,7 @@
   }
   &__title{
     @extend %monserrat-800;
+    
     max-width: 840px;
     line-height: 1;
     margin-bottom: 32px;
@@ -164,7 +170,7 @@
   &__link{
      @extend %monserrat-400;
      color:#fff;
-     background-color: $border;
+     background-color: #ff4500;
      padding: 24px 30px;
      border-radius: 30px;
      &:active{
@@ -186,7 +192,7 @@
         width: 26px;
         height: 26px;
         border-radius: 50%;
-        border: 1px solid transparent;
+        border: 3px solid transparent;
         position: relative;
         &::before{
           content: '';
@@ -202,9 +208,9 @@
       }
       &.slick-active{
          button{
-          border-color: $accent;
+          border-color: #ff4500;
           &::before{
-            background-color: $accent;
+            background-color: #ff4500;
           }
         }
       }
@@ -228,7 +234,7 @@
   }
   &__content{
     padding-top: 550px;
-    background-image: url('../images/about/content_img.png');
+    background-image: url('../images/slider_3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -244,10 +250,10 @@
 
   }
   &__content-text{
-    width: 580px;
+    width: 500px;
     padding-right: 76px;
     color: #fff;
-    @extend %monserrat-700;
+    @extend %monserrat-600;
     font-size: 16px;
     line-height: 20px;
   }
@@ -257,14 +263,14 @@
     @extend %monserrat-700;
     font-size: 16px;
     line-height: 20px;
-    padding: 20px 38px;
+    padding: 15px 20px;
     margin-right: 68px;
-  &:hover{
-    background-color: $border;
+    &:hover{
+      background-color: $border;
   }  
-  &:active{
-    background-color: $accent;
-    border: 3px solid $accent;
+    &:active{
+      background-color: $accent;
+      border: 3px solid $accent;
   }
   }
   &__items{
@@ -298,6 +304,42 @@
       font-size: 14px;
       line-height: 20px;
     }
+ }
+ .service{
+  margin-bottom: 100px;
+  &__content{
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content-list{
+    margin-top: 10px;
+    max-width: 600px;
+    @extend %monserrat-400;
+    margin-bottom: 44px;
+
+  }
+  &__content-item{
+    margin-bottom: 20px;
+    position: relative;
+  }
+  &__content-text::after{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: -18px;
+    background-color: #222222;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+
+  }
+  &__content-img{
+    max-width: 650px;
+    height: auto;
+    border-radius: 10px;
+  }
  }
  .tabs{
   &__title{
@@ -336,34 +378,51 @@
     @extend %monserrat-400;
     font-size: 16px;
     line-height: 32px;
-
     
   }
   &__content-img{
     width: 50%;
+    max-height: 300px;
+    border-radius: 10px;
   }
 
  }
  .faqs{
   margin-top: 100px;
   &__title{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 39px;
+      border-bottom: 1px solid $accent;
+  
 
   }
   &__wrapper{
-    border: 1px solid #cacaca;
-    border-right: none;
-    border-left: none;
-    padding: 39px 0;
+    border-bottom: 1px solid $accent;
+    padding: 30px 0 39px 50px;
+
   }
+
+  
   &__subtitle{
-    @extend %monserrat-700;
+    @extend %monserrat-600;
     line-height: 32px;
     color: #333;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     cursor: pointer;
+    position: relative;
     
   }
+  &__subtitle::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -25px;
+     width: 12px;
+    height: 12px;
+    background-color: #ff4500;
+    border-radius: 50%;
+  }
+
   &__content{
     @extend %monserrat-400;
     line-height: 32px;
@@ -374,76 +433,107 @@
  
 .footer{
   margin-top: 100px;
+  padding-top: 10px;
   background: #222222;
-  &__inner{
+  &__contacts-inner{
     display: flex;
     justify-content: space-between;
-    padding-top: 48px;
-    padding-bottom: 80px;
+    align-items: center;
+    padding-top: 5px;
+    padding-right: 50px;
   }
-&-menu{
-  margin-top: 30px;
-}
- &-menu__list-link{
-  color: #cacaca;
-  @extend %monserrat-600;
-  line-height: 36px;
- }
- &__form{
-  width: 500px;
- 
- &-title{
-  color: #cacaca;
-  @extend %monserrat-400;
-  font-size: 38px;
-  line-height: 42px;
-  padding-bottom: 30px;
- }
-}
- &__form input,
-&__form textarea{
-  border: none;
-  display: block;
-  width: 100%;
-  padding: 16px;
-  margin-bottom: 16px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #cacaca;
-  @extend %monserrat-400;
-  line-height: 32px;
-  background-color: #414141;
-}
-&__form input::placeholder,
-&__form textarea::placeholder{
-  font-size: 14px;
-  color: #cacaca;
-  @extend %monserrat-400;
-  line-height: 32px;
-
-}
-&__form textarea{
+  &__logo-img{
+    display: inline-block;
+    width: 400px;
+    height: 402px;
+  }
+  &__address{
+      @extend %monserrat-600;
+      font-style: normal;
+      color: #cacaca;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    &__teim,
+    &__tel, 
+    &__email {
+      color: #cacaca;
+      @extend %monserrat-600;
+    }
   
-  min-height: 140px;
-  resize: none;
+    &__tel {
+      display: block;
+    }
+    &-content__wrapper{
+      padding-top: 50px;
+      padding-bottom: 50px;
+     /* display: flex;
+      justify-content: space-around;*/
+    }
+    &-form{
+     min-width: 60%;
+     padding-right: 150px;
+     display: inline-block;
+  
+    }
+    &-form__title{
+      color: #cacaca;
+      @extend %monserrat-400;
+      font-size: 38px;
+      line-height: 42px;
+      padding-bottom: 30px;
+    }
+    &-form__input,
+    &-form__textarea{
+      border: none;
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #cacaca;
+      @extend %monserrat-400;
+      line-height: 32px;
+      background-color: #414141;
+      border-radius: 30px;
+    }
+    &-form__textarea{
+      min-height: 140px;
+      resize: none;
 
-}
-&__form button{
-  @extend %monserrat-700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #fff;
-  background-color: $border;
-  padding: 15px;
-}
-&__text{
-  padding-top: 60px;
-  width: 400px;
-  color: #cacaca;
-  @extend %monserrat-400;
-  line-height: 32px;
-}
-}
+    }
+    &-form__input::placeholder,
+    &-form__textarea::placeholder{
+      font-size: 14px;
+      color: #cacaca;
+      @extend %monserrat-400;
+      line-height: 32px;
+
+    }
+    &-form__btn{
+      @extend %monserrat-700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #fff;
+      background-color: $border;
+      padding: 15px;
+      border-radius: 20px;
+ 
+    }
+    &-form__img{
+     margin-top: 50px;
+      height: 350px;
+      width: 45%;
+      border: 1px solid transparent;
+      border-radius: 20px;
+    
+    }
+
+  }
+  
+
+
 
 
 
