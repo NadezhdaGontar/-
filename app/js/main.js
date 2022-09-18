@@ -8,7 +8,12 @@ $('.slider__inner').slick({
 });
 });
 
-
+$(".menu a").on("click", function (e) {
+			e.preventDefault();
+  	var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
 
 const searchBtn = document.querySelector(".search-form__search-btn");
 const cancelBtn = document.querySelector(".search-form__cancel-btn");

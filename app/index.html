@@ -17,20 +17,20 @@
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__list-item">
-            <a class="menu__list-link menu__list-link--active" href="#">О нас</a>
+            <a class="menu__list-link menu__list-link--active" href="#about">О нас</a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Услуги</a>
+            <a class="menu__list-link" href="#service">Услуги</a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Этапы</a>
+            <a class="menu__list-link" href="#tabs">Этапы</a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link" href="#">FAQ</a>
+            <a class="menu__list-link" href="#faqs">FAQ</a>
           </li>
           
           <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Контакты</a>
+            <a class="menu__list-link" href="#footer">Контакты</a>
           </li>
          </ul>
       </nav>
@@ -48,7 +48,7 @@
 </header>
 <main>
   <section class="slider">
-    <div class="container">
+    <div class="container slider__container">
       <div class="slider__inner">
         <div class="slider__item slider__item-one">
           <div class="slider__content">
@@ -87,7 +87,7 @@
       </div>
     </div>
   </section>
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
        <h2 class="title">
            О нас
@@ -109,15 +109,12 @@
         </div>
       </div>
   </section>
-  <section class="service">
+  <section class="service" id="service">
     <div class="container">
       <h2 class="title">
         Наши услуги
       </h2>
       <div class="service__content">
-      <!--<h3 class="service__title">
-        Мы предлагаем следующие услуги нашим клиентам:
-      </h3>-->
       <img class="service__content-img" src="images/service.jpg" alt="фото из раздела услуг">
       <ul class="service__content-list">
         <li class="service__content-item">
@@ -139,7 +136,7 @@
      </div>  
     </div>
   </section>
-  <section class="tabs">
+  <section class="tabs" id="tabs">
     <div class="container">
       <h2 class="title tabs__title">
         Как мы работаем
@@ -203,7 +200,7 @@
 		</div>
     </div>
   </section>
-  <section class="faqs">
+  <section class="faqs" id="faqs">
     <div class="container">
       <h2 class="title faqs__title">
         Часто задаваемые вопросы
@@ -246,7 +243,7 @@
     </div>
   </section>
 </main>
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
       
     <div class="footer__contacts-inner">
@@ -283,6 +280,7 @@
     </div>
 </footer>
 <script src="https://kit.fontawesome.com/b1931aac16.js" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/main.min.js"></script> 
 </body>
 </html>
