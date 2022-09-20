@@ -8,12 +8,16 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<header class="header">
+
+<!--<header class="header">
   <div class="container">
     <div class="header__inner">
       <a class="header__logo" href="#">
         <img class="logo__img" src="images/logo.png" alt="Логотип">
-      </a>      
+      </a>   
+      <div class="header__menu-btn">
+      <span></span>
+    </div>   
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__list-item">
@@ -34,7 +38,7 @@
           </li>
          </ul>
       </nav>
-      <form  class="search-form">
+     <form  class="search-form">
         <input class="search-form__input" type="text">
         <div class="search-form__search-btn">
           <i class="fas fa-search"></i>
@@ -45,9 +49,9 @@
       </form>
     </div>
   </div>
-</header>
+</header>-->
 <main>
-  <section class="slider">
+ <!-- <section class="slider">
     <div class="container slider__container">
       <div class="slider__inner">
         <div class="slider__item slider__item-one">
@@ -86,7 +90,7 @@
          </div>
       </div>
     </div>
-  </section>
+  </section>-->
   <section class="about" id="about">
     <div class="container">
        <h2 class="title">
@@ -100,7 +104,8 @@
       <div class="about__content">
         <div class="about__content-inner">
             <p class="about__content-text">
-              Банки больше не диктуют условия - ставку по ипотеке выбираете вы! Ипотека 0,1% на весь срок!
+              Банки больше не диктуют условия! Cтавку по ипотеке выбираете вы!
+              
             </p>
             <a class="about__content-link" href="#">
              Подробнее
@@ -109,13 +114,13 @@
         </div>
       </div>
   </section>
-  <section class="service" id="service">
+ <section class="service" id="service">
     <div class="container">
       <h2 class="title">
-        Наши услуги
+       Услуги
       </h2>
       <div class="service__content">
-      <img class="service__content-img" src="images/service.jpg" alt="фото из раздела услуг">
+         
       <ul class="service__content-list">
         <li class="service__content-item">
           <span class="service__content-text">Проектирование. Подготовка дизайн-проектов, эскизной, рабочей документации для строительства, капитального ремонта, реконструкции, чистовой отделки;</span>
@@ -133,10 +138,11 @@
            <span class="service__content-text">Благоустройство: мы строим парковки, подъездные пути, создаем зоны отдыха, выполняем озеленение, устанавливаем декоративное освещение.</span>
         </li>
       </ul>   
+      <img class="service__content-img" src="images/service.jpg" alt="фото из раздела услуг">
      </div>  
     </div>
   </section>
-  <section class="tabs" id="tabs">
+ <section class="tabs" id="tabs">
     <div class="container">
       <h2 class="title tabs__title">
         Как мы работаем
@@ -200,13 +206,12 @@
 		</div>
     </div>
   </section>
-  <section class="faqs" id="faqs">
+ <!--<section class="faqs" id="faqs">
     <div class="container">
       <h2 class="title faqs__title">
         Часто задаваемые вопросы
       </h2> 
       <div class="faqs__wrapper">
-        
         <h3 class="faqs__subtitle" data-name="accordeon-title">
             Могу ли я ознакомиться с необходимой проектной  документацией?
         </h3>
@@ -241,11 +246,11 @@
           </p>
       </div>
     </div>
-  </section>
+  </section>-->
 </main>
 <footer class="footer" id="footer">
   <div class="container">
-      
+  <div class="footer__top-wrapper">    
     <div class="footer__contacts-inner">
         <address class="footer__address">
           г. Тверь, ул. Хромова,<br> дом 10,
@@ -261,8 +266,12 @@
           </a>
           <a class="footer__email" href="mailto:Haus22@yandex.ru">Haus22@yandex.ru</a><br>
       </div>
+      
       </div>
-
+      <div class="footer__contacts-logo">
+        <img src="images/logo.png" alt="логотип">
+      </div>
+  </div>    
       <div class="footer-content__wrapper">
         <form class="footer-form">
           <h3 class="footer-form__title">Оставить заявку</h3>

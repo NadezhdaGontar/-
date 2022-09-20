@@ -1,0 +1,164 @@
+@media (max-width: 1100px) {
+  .service{
+   &__content{
+    display: block;
+   }  
+   &__content-list{
+    min-width: 100%;
+   }
+   &__content-text{
+    min-width: 100%;
+
+   }
+   &__content-img{
+    display: block;
+    min-width: 100%;
+   }
+  }
+  .tabs{
+  &__item{
+    margin-right: 40px;
+  }
+  &__content-inner{
+    display: block;
+  }
+  &__content-text{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  &__content-img{
+    min-width: 100%;
+
+  }
+  }
+  .footer{
+    margin-top: 50px;
+    &__contacts-inner{
+      padding-right: 30px;
+    }
+  
+  &__logo-img{
+    width: 300px;
+  }
+ }
+}
+
+@media (max-width: 900px) {
+  .footer{
+    &__logo-img{
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    &-form{
+      min-width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+@media (max-width: 730px){
+  .footer{
+    &__logo-img{
+      display: none;
+
+    }
+    &__top-wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__contacts-inner{
+      display: block;
+      max-width: 60%;
+      margin-right: 30px;
+    }
+    &__contacts-logo{
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+    }
+  &-form{
+    display: block;
+    }
+  &-form__btn{
+    display: block;
+    margin: 0 auto;
+  } 
+  }
+
+}
+
+@media (max-width: 630px){
+  .about{
+    &__text{
+      margin-bottom: 10px;
+    }
+    &__content{
+     background-image: none;
+     padding-top: 15px;
+     
+    }
+    &__content-inner{
+      display: block;
+      padding-top: 15px;
+      padding-bottom: 40px;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+     
+    }
+    &__content-text{
+      width: auto ;
+      padding: 20px;
+      
+     
+    }
+    &__content-link{
+      margin-right: 0;
+     
+    }
+  }
+  .service{
+    &__content-img{
+      display: block;
+      max-width: 100%;
+   }
+
+  }
+  .tabs{
+  &__item{
+    margin-right: 20px;
+    }
+  }
+  .footer{
+    &__contacts-inner{
+      display: block;
+      min-width: 100%;
+      margin-right: 0;
+      text-align: center;
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &__contacts-logo{
+      display: none;
+    }
+  &-form__title{
+    display: block;
+    text-align: center;
+  }  
+  &-form__btn{
+    display: block;
+    width: 100%;
+  } 
+  }
+}
+
+@media (max-width: 400px){
+    .tabs{
+  &__item{
+    margin-right: 15px;
+    }
+  }
+
+}
+ 
