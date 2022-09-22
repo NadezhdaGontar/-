@@ -56,6 +56,25 @@
       padding-right: 0;
     }
   }
+  .faqs{
+    margin-top: 50px;
+    &__title{
+      margin: 20px 0;
+    }
+    &__wrapper{
+      padding: 15px 0 15px 20px;
+    }
+    &__subtitle{
+      font-weight: 500;
+      line-height: 26px;
+    }
+  }
+  .slider{
+    margin-bottom: 50px;
+    &__title{
+      font-size: 38px;
+    }
+  }
 }
 @media (max-width: 730px){
   .footer{
@@ -157,6 +176,20 @@
     .tabs{
   &__item{
     margin-right: 15px;
+    }
+  }
+   .slider{
+    margin-bottom: 50px;
+    &__content{
+      padding-left: 20px;
+    }
+    &__title{
+     font-size: 24px;
+     
+    }
+    &__text{
+      font-weight: 500;
+      font-size: 12px;
     }
   }
 

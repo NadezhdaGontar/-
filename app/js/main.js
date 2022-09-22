@@ -4,7 +4,18 @@ $('.slider__inner').slick({
   arrows: false,
   fade: true,
   autoplay: true,
-  autoplaySpeed: 2000
+  autoplaySpeed: 2000,
+  responsive: [  
+    {
+      breakpoint: 1024,
+      settings: {
+      swipe: true,  
+      }
+
+    },
+    
+  ]
+
 });
 });
 
