@@ -1,90 +1,99 @@
 @media (max-width: 1100px) {
- .header{
-  z-index: 999;
-  &__menu-btn{
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: $accent;
-    border-radius: 50%;
+ 
+  .menu{
+    margin-left: auto;
+  &__list{
+      transform: translateY(-200%);
+      position: absolute;
+      top: 72px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      background-color: #000;
+      z-index: 5;
+      transition: all .3s;
+  
+  &.menu__list--active {
+         transform: translateY(0%);
+         transition: all .3s;
+
+      }
+     
+  }  
+
+    
+  &__list-item + .menu__list-item{
+      padding-left: 15px;
   }
-  &__menu-btn:hover{
-    background-color: $border;
-    transition: 0.4s;
+   &__list-item {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    
   }
-  &__menu-btn span,
-  &__menu-btn span::after,
-  &__menu-btn span::before{
+  &__list-item:last-child{
+    margin-bottom: 20px;
+  }
+  &__list-link{
+    padding: 20px 0;
+    display: block;  
+  }
+  &__btn{
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: #ff4500;
+      border-radius: 50%;   
+   
+ }
+  &__btn span,
+  &__btn span::after,
+  &__btn span::before{
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 4px;
     background-color: #000;
 
   }
-  &__menu-btn span{
+    &__btn span{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  &__menu-btn span::after{
+  &__btn span::after{
      content: '';
      top: 8px;
      right: 0;
   }
-  &__menu-btn span::before{
+  &__btn span::before{
      content: '';
      top: -8px;
      left: 0;
   }
-  .active .header__menu-btn span{
-   background-color: transparent;
+  
+.menu__btn--active span{
+    background-color: transparent;
 }
- .active .header__menu-btn span::after{
+.menu__btn--active span::after{
     top: 0;
     transform: rotate(45deg);
     transition: 0.4s;
 }
-  .active .header__menu-btn span::before{
+.menu__btn--active span::before{
     top: 0;
     transform: rotate(-45deg);
     transition: 0.4s;
 }
-&__menu-list{
-   position: fixed;
-   left: -100%;
-   top: 70px;
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-   width: 100%;
-   height: 100%;
-   background-color: #222222;   
-  }
-   .active .header__menu-list{
-    left: 0;
-    transition: 0.4s;
-  }
-    &__menu-item{
-    width: 100%;
-    list-style: none;
-    margin: 30px 0 30px 40px;
-    padding: 0;
 
-  }
-
-  &__menu-link{
-     font-size: 30px;
-     color: 33px;
-     text-decoration: none;
-  }
-
+}
 .search-form{
   display: none;
 }
- }
 .service{
    &__content{
     display: block;
